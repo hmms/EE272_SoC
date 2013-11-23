@@ -15,7 +15,7 @@ reg [15:0] out;
 wire        linear_feedback;
 
 //-------------Code Starts Here-------
-assign linear_feedback = !(((out[15] ^ out[13]) ^ out[12]) ^ out[10]);
+assign linear_feedback =(((out[15] ^ out[13]) ^ out[12]) ^ out[10]);
 
 always @(posedge clk)
 if (reset) begin // active high reset
